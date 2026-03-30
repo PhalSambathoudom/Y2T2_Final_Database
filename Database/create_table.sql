@@ -10,7 +10,7 @@ CREATE TABLE building (
 
 -- 2. Room  
 CREATE TABLE room (
-    room_id  INT PRIMARY KEY ,
+    room_id	INT PRIMARY KEY ,
     floor VARCHAR(50),
     room_type VARCHAR(20) NOT NULL COMMENT 'storage | classroom',
     building_id INT NOT NULL,
@@ -117,3 +117,5 @@ CREATE TABLE audit_log (
     action VARCHAR(20),
     action_date DATETIME
 ) ENGINE=InnoDB;
+
+

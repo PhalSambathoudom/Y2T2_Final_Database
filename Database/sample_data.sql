@@ -1,0 +1,301 @@
+USE assetDB;
+
+-- 1. Building 
+INSERT INTO building (building_id, building_name) VALUES
+(1, 'Innovation Building'),
+(2, 'IDT Building'),
+(3, 'IDG Building'),
+(4, 'Library & Cafeteria Building');
+
+-- ─────────────────────────────────────────────────────────
+-- 2. Room 
+INSERT INTO room (room_id, floor, room_type, building_id) VALUES
+-- Building 1: Innovation Building  — classrooms
+(1001, 'Ground Floor', 'classroom', 1),
+(1002, 'Ground Floor', 'classroom', 1),
+(1003, 'Ground Floor', 'classroom', 1),
+(1004, 'Ground Floor', 'classroom', 1),
+(1005, 'Ground Floor', 'classroom', 1),
+(1101, '1st Floor',    'classroom', 1),
+(1102, '1st Floor',    'classroom', 1),
+(1103, '1st Floor',    'classroom', 1),
+(1104, '1st Floor',    'classroom', 1),
+(1105, '1st Floor',    'classroom', 1),
+(1201, '2nd Floor',    'classroom', 1),
+(1202, '2nd Floor',    'classroom', 1),
+(1203, '2nd Floor',    'classroom', 1),
+(1204, '2nd Floor',    'classroom', 1),
+(1205, '2nd Floor',    'classroom', 1),
+(1301, '3rd Floor',    'classroom', 1),
+(1302, '3rd Floor',    'classroom', 1),
+(1303, '3rd Floor',    'classroom', 1),
+(1304, '3rd Floor',    'classroom', 1),
+(1305, '3rd Floor',    'classroom', 1),
+-- Building 2: IDT Building  — classrooms
+(2001, 'Ground Floor', 'classroom', 2),
+(2002, 'Ground Floor', 'classroom', 2),
+(2003, 'Ground Floor', 'classroom', 2),
+(2004, 'Ground Floor', 'classroom', 2),
+(2005, 'Ground Floor', 'classroom', 2),
+(2101, '1st Floor',    'classroom', 2),
+(2102, '1st Floor',    'classroom', 2),
+(2103, '1st Floor',    'classroom', 2),
+(2104, '1st Floor',    'classroom', 2),
+(2105, '1st Floor',    'classroom', 2),
+(2201, '2nd Floor',    'classroom', 2),
+(2202, '2nd Floor',    'classroom', 2),
+(2203, '2nd Floor',    'classroom', 2),
+(2204, '2nd Floor',    'classroom', 2),
+(2205, '2nd Floor',    'classroom', 2),
+(2301, '3rd Floor',    'classroom', 2),
+(2302, '3rd Floor',    'classroom', 2),
+(2303, '3rd Floor',    'classroom', 2),
+(2304, '3rd Floor',    'classroom', 2),
+(2305, '3rd Floor',    'classroom', 2),
+-- Building 3: IDG Building  — classrooms
+(3001, 'Ground Floor', 'classroom', 3),
+(3002, 'Ground Floor', 'classroom', 3),
+(3003, 'Ground Floor', 'classroom', 3),
+(3004, 'Ground Floor', 'classroom', 3),
+(3005, 'Ground Floor', 'classroom', 3),
+(3101, '1st Floor',    'classroom', 3),
+(3102, '1st Floor',    'classroom', 3),
+(3103, '1st Floor',    'classroom', 3),
+(3104, '1st Floor',    'classroom', 3),
+(3105, '1st Floor',    'classroom', 3),
+(3201, '2nd Floor',    'classroom', 3),
+(3202, '2nd Floor',    'classroom', 3),
+(3203, '2nd Floor',    'classroom', 3),
+(3204, '2nd Floor',    'classroom', 3),
+(3205, '2nd Floor',    'classroom', 3),
+(3301, '3rd Floor',    'classroom', 3),
+(3302, '3rd Floor',    'classroom', 3),
+(3303, '3rd Floor',    'classroom', 3),
+(3304, '3rd Floor',    'classroom', 3),
+(3305, '3rd Floor',    'classroom', 3),
+-- Building 4: Library & Cafeteria Building  — classrooms
+(4001, 'Ground Floor', 'classroom', 4),
+(4002, 'Ground Floor', 'classroom', 4),
+(4003, 'Ground Floor', 'classroom', 4),
+(4004, 'Ground Floor', 'classroom', 4),
+(4005, 'Ground Floor', 'classroom', 4),
+(4101, '1st Floor',    'classroom', 4),
+(4102, '1st Floor',    'classroom', 4),
+(4103, '1st Floor',    'classroom', 4),
+(4104, '1st Floor',    'classroom', 4),
+(4105, '1st Floor',    'classroom', 4),
+(4201, '2nd Floor',    'classroom', 4),
+(4202, '2nd Floor',    'classroom', 4),
+(4203, '2nd Floor',    'classroom', 4),
+(4204, '2nd Floor',    'classroom', 4),
+(4205, '2nd Floor',    'classroom', 4),
+(4301, '3rd Floor',    'classroom', 4),
+(4302, '3rd Floor',    'classroom', 4),
+(4303, '3rd Floor',    'classroom', 4),
+(4304, '3rd Floor',    'classroom', 4),
+(4305, '3rd Floor',    'classroom', 4),
+-- Storage rooms  
+(9001, '1st Floor',    'storage', 1),
+(9002, '2nd Floor',    'storage', 2),
+(9003, '3rd Floor',    'storage', 3),
+(9004, 'Ground Floor', 'storage', 4),
+(9005, '1st Floor',    'storage', 2),
+(9006, '2nd Floor',    'storage', 3);
+
+-- 3. Classroom  
+INSERT INTO classroom (classroom_id, classroom_name, room_id) VALUES
+-- Building 1
+(1001, 'Innovation Hall A',   1001),
+(1002, 'Innovation Hall B',   1002),
+(1003, 'Innovation Hall C',   1003),
+(1004, 'Innovation Hall D',   1004),
+(1005, 'Innovation Hall E',   1005),
+(1101, 'Research Lab A',      1101),
+(1102, 'Research Lab B',      1102),
+(1103, 'Research Lab C',      1103),
+(1104, 'Research Lab D',      1104),
+(1105, 'Research Lab E',      1105),
+(1201, 'Innovation Studio A', 1201),
+(1202, 'Innovation Studio B', 1202),
+(1203, 'Innovation Studio C', 1203),
+(1204, 'Innovation Studio D', 1204),
+(1205, 'Innovation Studio E', 1205),
+(1301, 'Conference Room A',   1301),
+(1302, 'Conference Room B',   1302),
+(1303, 'Conference Room C',   1303),
+(1304, 'Conference Room D',   1304),
+(1305, 'Conference Room E',   1305),
+-- Building 2
+(2001, 'IDT Lobby A',         2001),
+(2002, 'IDT Lobby B',         2002),
+(2003, 'IDT Lobby C',         2003),
+(2004, 'IDT Lobby D',         2004),
+(2005, 'IDT Lobby E',         2005),
+(2101, 'CS Lab A',            2101),
+(2102, 'CS Lab B',            2102),
+(2103, 'CS Lab C',            2103),
+(2104, 'CS Lab D',            2104),
+(2105, 'CS Lab E',            2105),
+(2201, 'Network Lab A',       2201),
+(2202, 'Network Lab B',       2202),
+(2203, 'Network Lab C',       2203),
+(2204, 'Network Lab D',       2204),
+(2205, 'Network Lab E',       2205),
+(2301, 'Cyber Lab A',         2301),
+(2302, 'Cyber Lab B',         2302),
+(2303, 'Cyber Lab C',         2303),
+(2304, 'Cyber Lab D',         2304),
+(2305, 'Cyber Lab E',         2305),
+-- Building 3
+(3001, 'IDG Hall A',          3001),
+(3002, 'IDG Hall B',          3002),
+(3003, 'IDG Hall C',          3003),
+(3004, 'IDG Hall D',          3004),
+(3005, 'IDG Hall E',          3005),
+(3101, 'Design Studio A',     3101),
+(3102, 'Design Studio B',     3102),
+(3103, 'Design Studio C',     3103),
+(3104, 'Design Studio D',     3104),
+(3105, 'Design Studio E',     3105),
+(3201, 'Seminar Room A',      3201),
+(3202, 'Seminar Room B',      3202),
+(3203, 'Seminar Room C',      3203),
+(3204, 'Seminar Room D',      3204),
+(3205, 'Seminar Room E',      3205),
+(3301, 'Presentation Room A', 3301),
+(3302, 'Presentation Room B', 3302),
+(3303, 'Presentation Room C', 3303),
+(3304, 'Presentation Room D', 3304),
+(3305, 'Presentation Room E', 3305),
+-- Building 4
+(4001, 'Cafeteria A',         4001),
+(4002, 'Cafeteria B',         4002),
+(4003, 'Cafeteria C',         4003),
+(4004, 'Reception A',         4004),
+(4005, 'Reception B',         4005),
+(4101, 'Library Room A',      4101),
+(4102, 'Library Room B',      4102),
+(4103, 'Library Room C',      4103),
+(4104, 'Library Room D',      4104),
+(4105, 'Library Room E',      4105),
+(4201, 'Reading Room A',      4201),
+(4202, 'Reading Room B',      4202),
+(4203, 'Reading Room C',      4203),
+(4204, 'Reading Room D',      4204),
+(4205, 'Reading Room E',      4205),
+(4301, 'Study Room A',        4301),
+(4302, 'Study Room B',        4302),
+(4303, 'Study Room C',        4303),
+(4304, 'Study Room D',        4304),
+(4305, 'Study Room E',        4305);
+
+-- 4. Storage Room  (subtype — links back to its room row)
+INSERT INTO storage_room (storage_id, room_name, room_id) VALUES
+(1, 'Innovation Storage', 9001),
+(2, 'IDT Storage A',      9002),
+(3, 'IDG Storage A',      9003),
+(4, 'Library Storage',    9004),
+(5, 'IDT Storage B',      9005),
+(6, 'IDG Storage B',      9006);
+
+-- 5. Type of Asset  
+INSERT INTO type_of_asset (type_id, type_name) VALUES
+(1, 'Computer'),
+(2, 'Projector'),
+(3, 'Desk'),
+(4, 'Chair'),
+(5, 'Air Conditioner'),
+(6, 'White Board'),
+(7, 'Smart Board'),
+(8, 'Printer');
+
+-- 6. Asset
+INSERT INTO asset (asset_id, asset_name, asset_status, type_id, room_id) VALUES
+(1,  'Dell PC',           'Good',         1, 2101),
+(2,  'HP PC',             'Needs Repair', 1, 2102),
+(3,  'Epson Projector',   'Good',         2, 3201),
+(4,  'Wooden Desk',       'Good',         3, 3101),
+(5,  'Office Chair',      'Good',         4, 3301),
+(6,  'LG AC',             'Good',         5, 2201),
+(7,  'Lenovo PC',         'Good',         1, 2101),
+(8,  'Acer PC',           'Needs Repair', 1, 2102),
+(9,  'BenQ Projector',    'Good',         2, 9001),
+(10, 'Smart Board 55"',   'Good',         7, 2201),
+(11, 'Plastic Chair',     'Good',         4, 3301),
+(12, 'Samsung AC',        'Good',         5, 9003),
+(13, 'Canon Printer',     'Needs Repair', 8, 4101),
+(14, 'Standing Desk',     'Good',         3, 3101),
+(15, 'Glass Whiteboard',  'Good',         6, 9002),
+(16, 'HP Printer',        'Good',         8, 9001),
+(17, 'Epson AC',          'Good',         5, 1201),
+(18, 'Wooden Chair',      'Good',         4, 4201),
+(19, 'Dell PC',           'Good',         1, 2301),
+(20, 'Optoma Projector',  'Needs Repair', 2, 1301),
+(21, 'Steel Desk',        'Good',         3, 4301);
+
+-- 7. Repair Record 
+INSERT INTO repair_record (repair_id, asset_id, fix_date, reason, repair_cost) VALUES
+(1, 2,  '2026-03-01', 'Keyboard broken',   50.00),
+(2, 3,  '2026-03-05', 'Lamp issue',        30.00),
+(3, 8,  '2026-02-14', 'GPU fan failure',   75.00),
+(4, 13, '2026-03-10', 'Paper jam damage',  40.00),
+(5, 20, '2026-03-18', 'Lens cracked',     110.00),
+(6, 2,  '2026-03-20', 'Screen flickering', 90.00);
+
+-- 8. Purchase Record  
+INSERT INTO purchase_record (purchase_id, purchase_date, descriptions, asset_id, amount) VALUES
+(1, '2026-01-10', 'New Dell PC',       1,  800.00),
+(2, '2026-01-15', 'Epson Projector',   3,  600.00),
+(3, '2026-02-20', 'Office Chair',      5,  120.00),
+(4, '2026-02-01', 'Lenovo PC',         7,  750.00),
+(5, '2026-02-05', 'Smart Board 55"',  10, 1200.00),
+(6, '2026-02-10', 'Samsung AC unit',  12,  550.00),
+(7, '2026-03-01', 'Canon Printer',    13,  320.00),
+(8, '2026-03-08', 'Glass Whiteboard', 15,  480.00);
+
+-- 9. Employees
+INSERT INTO employees (employee_id, employee_firstname, employee_lastname, salary, hire_date, resign_date, phone_number, building_id, managed_room_id) VALUES
+(1,  'Ly',    'Sophearak',    1500.00, '2025-06-01', NULL, '012397423', 1, 1201),
+(2,  'Poch',  'Seavmeng',     1600.00, '2025-07-01', NULL, '098438342', 2, 2102),
+(3,  'Seng',  'Namkea',       1700.00, '2025-08-01', NULL, '091345252', 2, 2101),
+(4,  'Phal',  'Sambathoudom', 1900.00, '2025-08-01', NULL, '092347623', 3, 3201),
+(5,  'Thai',  'Chansothymon', 1800.00, '2025-08-01', NULL, '098334623', 4, 4101),
+(6,  'Vanna', 'Ratha',        1550.00, '2025-09-01', NULL, '011223344', 2, 2101),
+(7,  'Dara',  'Kosal',        1650.00, '2025-09-15', NULL, '012334455', 3, 3201),
+(8,  'Chanty','Bopha',        1750.00, '2025-10-01', NULL, '093445566', 1, 1001),
+(9,  'Sokha', 'Vireak',       2000.00, '2025-10-15', NULL, '097556677', 4, 4101),
+(10, 'Pisey', 'Sreynich',     1850.00, '2025-11-01', NULL, '016667788', 3, 3301);
+
+-- 10. Employees Address 
+INSERT INTO employees_address (address_id, commune, district, province, street_number, zip_code, employee_id) VALUES
+(1,  'Doun Kaev',       'Doun Kaev',   'Takeo',         '122A', '10001', 1),
+(2,  'Tramsosor',       'Banteaymeas', 'Kampot',         '134A', '10002', 2),
+(3,  'Sla Duok',        'Tomteav',     'Kampong Cham',   '56C',  '10003', 3),
+(4,  'Tramsosor',       'Banteaymeas', 'Kampot',         '134C', '10023', 4),
+(5,  'Veng Sreng',      '7 Makara',    'Phnom Penh',     '126C', '10213', 5),
+(6,  'Chbar Ampov',     'Chbar Ampov', 'Phnom Penh',     '45B',  '12001', 6),
+(7,  'Tuol Kork',       'Tuol Kork',   'Phnom Penh',     '78D',  '12002', 7),
+(8,  'Prek Pnov',       'Prek Pnov',   'Phnom Penh',     '12F',  '12003', 8),
+(9,  'Boeng Keng Kang', 'Chamkar Mon', 'Phnom Penh',     '99A',  '12004', 9),
+(10, 'Prey Sar',        'Dangkor',     'Phnom Penh',     '33C',  '12005', 10);
+
+-- 11. Borrow Asset
+INSERT INTO borrow_log (borrow_id, asset_id, employee_id, borrow_date, return_date, item_status) VALUES
+(1, 1,  2,  '2026-03-10', '2026-03-12', 'Returned'),
+(2, 5,  3,  '2026-03-15', NULL,         'Borrowed'),
+(3, 7,  6,  '2026-03-16', '2026-03-18', 'Returned'),
+(4, 9,  7,  '2026-03-17', NULL,         'Borrowed'),
+(5, 10, 8,  '2026-03-18', '2026-03-20', 'Returned'),
+(6, 12, 9,  '2026-03-20', NULL,         'Borrowed'),
+(7, 14, 10, '2026-03-22', '2026-03-25', 'Returned');
+
+-- 12. Audit Log
+INSERT INTO audit_log (audit_id, table_name, action, action_date) VALUES
+(1, 'asset',           'INSERT', '2026-03-01 10:00:00'),
+(2, 'repair_record',   'INSERT', '2026-03-02 11:00:00'),
+(3, 'asset',           'INSERT', '2026-02-01 09:00:00'),
+(4, 'asset',           'INSERT', '2026-02-05 10:30:00'),
+(5, 'repair_record',   'INSERT', '2026-02-15 08:00:00'),
+(6, 'borrow_asset_log',    'INSERT', '2026-03-17 14:00:00'),
+(7, 'employees',       'INSERT', '2026-03-18 11:00:00'),
+(8, 'asset',           'UPDATE', '2026-03-22 16:00:00');
