@@ -1,6 +1,4 @@
--- ------------------------------------------------------------
--- query and sub query
--- ------------------------------------------------------------
+USE assetDB;
 
 -- 1. Get all employees who manage at least one room
 SELECT *
