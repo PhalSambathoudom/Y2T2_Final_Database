@@ -1,4 +1,4 @@
-use assetDB;
+USE assetDB;
 DELIMITER //
 DROP PROCEDURE IF EXISTS getAssetsNeedRepair;
 CREATE PROCEDURE getAssetsNeedRepair()
